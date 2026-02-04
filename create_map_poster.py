@@ -612,8 +612,8 @@ def create_poster(
     ax.set_ylim(crop_ylim)
 
     # Layer 3: Gradients (Top and Bottom)
-    create_gradient_fade(ax, THEME['gradient_color'], location='bottom', zorder=10)
-    create_gradient_fade(ax, THEME['gradient_color'], location='top', zorder=10)
+    # create_gradient_fade(ax, THEME['gradient_color'], location='bottom', zorder=10)
+    # create_gradient_fade(ax, THEME['gradient_color'], location='top', zorder=10)
 
     # Calculate scale factor based on smaller dimension (reference 12 inches)
     # This ensures text scales properly for both portrait and landscape orientations
@@ -739,18 +739,18 @@ def create_poster(
     else:
         font_attr = FontProperties(family="monospace", size=8)
 
-    ax.text(
-        0.98,
-        0.02,
-        "© OpenStreetMap contributors",
-        transform=ax.transAxes,
-        color=THEME["text"],
-        alpha=0.5,
-        ha="right",
-        va="bottom",
-        fontproperties=font_attr,
-        zorder=11,
-    )
+    # ax.text(
+    #     0.98,
+    #     0.02,
+    #     "© OpenStreetMap contributors",
+    #     transform=ax.transAxes,
+    #     color=THEME["text"],
+    #     alpha=0.5,
+    #     ha="right",
+    #     va="bottom",
+    #     fontproperties=font_attr,
+    #     zorder=11,
+    # )
 
     # 5. Save
     print(f"Saving to {output_file}...")
