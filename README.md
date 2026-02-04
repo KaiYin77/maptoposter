@@ -30,6 +30,9 @@ Make sure [uv](https://docs.astral.sh/uv/) is installed. Running the script by p
 # First run will automatically install dependencies
 uv run ./create_map_poster.py --city "Paris" --country "France"
 
+# Taipei
+uv run ./create_map_poster.py --city Taipei --country Taiwan --latitude 25.045 --longitude 121.54  -W 6.4 -H 3.6 --distance 30000 --theme japanese_ink # https://gis.rchss.sinica.edu.tw/mapclub_20260203/
+
 # Or sync dependencies explicitly first (using locked versions)
 uv sync --locked
 uv run ./create_map_poster.py --city "Paris" --country "France"
